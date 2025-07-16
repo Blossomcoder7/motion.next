@@ -1,12 +1,14 @@
 "use client";
-import {  useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import useFollowScroll from "@/components/useFollowScroll";
 import AnimatedEl from "@/components/UI/AnimatedEl";
 import Image from "next/image";
 import design from "@/assets/image/design.png";
 import engineer from "@/assets/image/engineer.png";
-import FlipText from "./FlipText";
+import HomeSectionTwo from "./HomeSectionTwo";
+import Section3 from "./Section3";
+import Section4 from "./Section4";
 
 const NewIndex = () => {
   const animationContainer = useRef<HTMLDivElement>(null);
@@ -57,7 +59,7 @@ const NewIndex = () => {
   }, [videoBoxRef, videoBoxContainer, topNavRef]);
 
   return (
-    <div className="flex flex-col min-h-[600vh] w-full">
+    <div className="flex flex-col min-h-[600vh] space-y-20 w-full">
       <div className="w-full min-h-fit relative flex flex-col justify-start items-center px-6 md:px-10    bg-white">
         <div
           ref={animationContainer}
@@ -110,7 +112,7 @@ const NewIndex = () => {
           </div>
           <div
             ref={videoEndPositionRef}
-            className="w-full   min-h-[350px] bg-red-400 rounded-2xl black-section  flex justify-center items-center"
+            className="w-full   min-h-[350px]  rounded-2xl black-section  flex justify-center items-center"
           >
             {/* Final landed video box */}
             <motion.div
@@ -139,10 +141,9 @@ const NewIndex = () => {
           </div>
         </div>
       </div>
-      <div className="h-20" />
-      <div className="flex w-full mx-auto max-w-md flex-col justify-start items-center">
-        <FlipText />
-      </div>
+      <HomeSectionTwo />
+      <Section3 />
+      <Section4 />
     </div>
   );
 };

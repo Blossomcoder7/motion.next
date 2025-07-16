@@ -2,12 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { HiOutlineBars3 } from "react-icons/hi2";
-import {
-  motion,
-  AnimatePresence,
-  useSpring,
-  useMotionValue,
-} from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import MeuItem from "./MeuItem";
 import useSmoothScroll from "../useSmoothScroll";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
@@ -43,23 +38,26 @@ const Navbar = () => {
     }
   }, [createInstance, removeInstance, refresh, isInitialized]);
 
-  const menu = ["Home", "About", "Projects", "Blogs", "Contact"];
+  const menu = ["Home", "About", "Projects"];
 
   const isScrolling = useWheelActivity(800);
-
 
   return (
     <ClickAwayListener onClickAway={() => setOpen(false)}>
       <motion.div
-        style={{
-          y: isScrolling ? 100 : 0,
-          opacity: isScrolling ? 0 : 1,
-        }}
+        style={
+          open
+            ? {}
+            : {
+                y: isScrolling ? 100 : 0,
+                opacity: isScrolling ? 0 : 1,
+              }
+        }
         transition={{
           duration: 0.6,
         }}
         ref={wrapperRef}
-        className="w-[90%] z-[9999] md:w-[95%] max-w-[680px] mx-auto rounded-2xl text-white bg-black/80 hover:bg-black/90 transition-all duration-200 ease-in cursor-pointer  hover:backdrop-blur-[3px] backdrop-blur-[2px] overflow-hidden"
+        className="w-full max-w-[680px] mx-auto rounded-2xl text-white bg-[#171717] transition-all duration-200 ease-in cursor-pointer  hover:backdrop-blur-[3px] backdrop-blur-[2px] overflow-hidden"
       >
         <AnimatePresence>
           {open && (
@@ -96,19 +94,19 @@ const Navbar = () => {
                   },
                 },
               }}
-              className="w-full bg-black/40  backdrop-blur-[2px] border-b border-black/60 overflow-hidden"
+              className="w-full bg-[#171717]   overflow-hidden"
             >
-              <div className="flex  py-4 px-6 flex-col  max-h-[40svh] w-full overflow-x-hidden ">
+              <div className="flex   flex-col bg-[#171717] max-h-[80svh] w-full overflow-x-hidden style-scroll style-scroll-thin">
                 <div
                   ref={scrollableMenuBox}
-                  className="overflow-auto  overflow-x-hidden pr-3 flex flex-col nested-scroll  w-full  space-y-4 style-scroll style-scroll-thin style-scroll-no-bg style-scroll-thumb-green"
+                  className="overflow-auto gap-3 pt-3 bg-[#171717]  overflow-x-hidden  flex flex-col nested-scroll  w-full style-scroll style-scroll-thin style-scroll-no-bg style-scroll-thumb-green"
                 >
                   {menu.map((a, i) => (
                     <MenuItemWrapElm
                       className="text-xl  font-semibold text-[white] uppercase "
                       key={i}
                     >
-                      <MeuItem containerRef={scrollableMenuBox}>
+                      <MeuItem open={open} containerRef={scrollableMenuBox}>
                         <SparkOnClick
                           sparkSize={40}
                           sparkColor="#ff0000"
@@ -120,8 +118,8 @@ const Navbar = () => {
                       </MeuItem>
                     </MenuItemWrapElm>
                   ))}
+                  <div className="w-full h-[1px] mx-auto  max-w-11/12 bg-white/20"></div>
                 </div>
-                <div className=" min-h-1 w-full border-b mt-2 border-white/40"></div>
               </div>
             </motion.div>
           )}
@@ -132,14 +130,14 @@ const Navbar = () => {
               open ? "hidden md:flex" : "flex"
             }`}
           >
-            <div className="h-12 w-12 md:h-16 md:w-16 bg-gray-200 rounded-2xl shadow-inner"></div>
+            <div className="h-12 w-12 md:h-17 md:w-17 bg-gray-200 rounded-2xl shadow-inner"></div>
           </div>
           <div className={`flex-1 ${open ? "hidden sm:block" : "block"}`}>
             <div className="h-full flex flex-col justify-center pl-3">
               <p className="uppercase font-semibold text-lg md:text-xl hover:cursor-pointer select-none">
-                WHOISRAHULMEHTA
+                Blossom Coder
               </p>
-              <p className="hidden sm:inline font-semibold text-xs md:text-sm select-none text-gray-300">
+              <p className="hidden sm:inline font-medium text-xs md:text-sm select-none ">
                 <AnimatedText speed={5000}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
                   ea.

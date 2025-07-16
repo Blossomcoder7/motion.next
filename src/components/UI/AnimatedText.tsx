@@ -21,7 +21,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   return (
     <span
       {...rest}
-      className={`text-[#b5b5b5a4] bg-clip-text inline-block ${
+      className={`text-[#b5b5b58c]  bg-clip-text inline-block ${
         disabled ? "" : "animate-shine"
       } ${className}`}
       style={{
