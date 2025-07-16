@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode, useEffect, useRef, useState } from "react";
-import Navbar from "./Navbar";
+
 import BottomNavbar from "./UI/Navbar";
 import useSmoothScroll from "./useSmoothScroll";
 import MagicScrollWrapper from "./wrappers/HideOnScroll";
