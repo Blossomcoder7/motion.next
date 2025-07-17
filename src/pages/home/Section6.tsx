@@ -92,7 +92,7 @@ const Section6 = () => {
         </AnimatePresence>
 
         {/* First grid */}
-        <div className="grid lg:grid-cols-3 place-items-center text-center lg:h-60 border-b border-[#d4d4d4]">
+        <div className="grid lg:grid-cols-3 place-items-center text-center  lg:h-60 border-b border-[#d4d4d4]">
           {firstGridItems.map(({ id, alt, src }, i) => (
             <div
               key={id}
@@ -116,7 +116,7 @@ const Section6 = () => {
         </div>
 
         {/* Second grid */}
-        <div className="grid  lg:grid-cols-7 place-items-center text-center lg:xh-60 ">
+        <div className="grid  lg:grid-cols-7 place-items-center text-center lg:h-60 ">
           {secondGridItems.map(({ id, alt, src }, i) => (
             <div
               key={id}
