@@ -96,7 +96,9 @@ const Section6 = () => {
           {firstGridItems.map(({ id, alt, src }, i) => (
             <div
               key={id}
-              ref={(el) => (cellsRefs.current[i] = el)}
+              ref={(el) => {
+                cellsRefs.current[i] = el;
+              }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex((p) => (p ? p : null))}
               className="flex justify-center items-center border-r p-4 border-[#d4d4d4] transition-all duration-200 ease-in-out w-full h-full cursor-pointer"
@@ -114,11 +116,13 @@ const Section6 = () => {
         </div>
 
         {/* Second grid */}
-        <div className="grid  lg:grid-cols-7 place-items-center text-center lg:h-60 ">
+        <div className="grid  lg:grid-cols-7 place-items-center text-center lg:xh-60 ">
           {secondGridItems.map(({ id, alt, src }, i) => (
             <div
               key={id}
-              ref={(el) => (cellsRefs.current[i + firstGridItems.length] = el)}
+              ref={(el) => {
+                cellsRefs.current[i + firstGridItems.length] = el;
+              }}
               onMouseEnter={() => setHoveredIndex(i + firstGridItems.length)}
               onMouseLeave={() => setHoveredIndex((p) => (p ? p : null))}
               className="flex justify-center items-center border-r border-[#d4d4d4] transition-all p-4 duration-200 ease-in-out w-full h-full cursor-pointer"
