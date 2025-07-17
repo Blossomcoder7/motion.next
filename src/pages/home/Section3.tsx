@@ -6,7 +6,7 @@ const Section3 = () => {
   return (
     <div className=" flex flex-col">
       <div className="w-full px-6">
-        <div className="flex flex-col  w-full justify-between text-[clamp(30px,10.42rem,5rem)] font-bold uppercase">
+        <div className="flex flex-col  w-full justify-between text-[clamp(48px,12vw,200px)] font-bold uppercase">
           <div className="flex w-full justify-between">
             <p className="px-4">Work</p>
             <p>{"'"}25</p>

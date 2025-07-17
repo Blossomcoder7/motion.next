@@ -79,7 +79,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <BottomNavbar />
       <Footer />
       <div className="w-full h-24 mt-5">
-        <div className="text-[#171717] uppercase font-semibold  w-full text-center text-8xl">Powered By Next.JS </div>
+        <div className="hidden text-[#171717] uppercase font-semibold  w-full text-center text-8xl">
+          Powered By Next.JS{" "}
+        </div>
       </div>
     </>
   );
