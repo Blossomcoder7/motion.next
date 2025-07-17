@@ -14,7 +14,7 @@ const Section4 = () => {
         <div className="min-h-fit py-24 w-full px-10  mx-auto max-w-9/12">
           <div className="h-full w-full flex flex-col justify-center  px-5 ">
             <p className="uppercase font-bold opacity-50 ">Services</p>
-            <MotionSpan parentEl={parentEl2} className=" text-5xl">
+            <MotionSpan parentEl={parentEl2} className=" text-2xl lg:text-5xl">
               Evolving with every brief and built for impact, my process spans
               design, development, and brand strategy—aligning vision with
               execution to bring clarity and edge to every project.
@@ -24,7 +24,7 @@ const Section4 = () => {
         <div ref={parentEl} className="bg-[#262626]  w-full rounded-2xl">
           <div className="flex flex-col justify-between gap-4  p-6">
             {/* one  */}
-            <div className="flex  border-b-1 border-white pb-8 py-3">
+            <div className="flex  flex-wrap gap-5 lg:flex-nowrap lg:gap-0 border-b-1 border-white pb-8 py-3">
               <MotionSpan parentEl={parentEl} className="py-1">
                 <p>01</p>
               </MotionSpan>
@@ -44,7 +44,10 @@ const Section4 = () => {
                   {"customers'"}
                   devotion.
                 </MotionSpan>
-                <div className="flex flex-wrap gap-1 px-5 font-semibold">
+                <MotionSpan
+                  parentEl={parentEl}
+                  className="flex flex-wrap gap-1 px-5 font-semibold"
+                >
                   <p className="bg-[#171717] w-fit px-3 py-1 rounded-md">
                     Research & Insights
                   </p>
@@ -63,7 +66,7 @@ const Section4 = () => {
                   <p className="bg-[#171717] w-fit px-3 py-1 rounded-md">
                     Workshops
                   </p>
-                </div>
+                </MotionSpan>
               </div>
 
               <div className="flex flex-3/6 relative justify-center items-center py-3">
@@ -76,7 +79,7 @@ const Section4 = () => {
               </div>
             </div>
             {/* two */}
-            <div className="flex  border-b-1 border-white pb-8 py-3">
+            <div className="flex  flex-wrap gap-5 lg:flex-nowrap lg:gap-0 border-b-1 border-white pb-8 py-3">
               <MotionSpan parentEl={parentEl} className="py-1">
                 <p>02</p>
               </MotionSpan>
@@ -95,7 +98,10 @@ const Section4 = () => {
                   strategy and creativity with UX insights to deliver
                   functionality and ease of use.
                 </MotionSpan>
-                <div className="flex flex-wrap gap-1 px-5 font-semibold">
+                <MotionSpan
+                  parentEl={parentEl}
+                  className="flex flex-wrap gap-1 px-5 font-semibold"
+                >
                   <p className="bg-[#171717] w-fit px-3 py-1 rounded-md">
                     Identity Design
                   </p>
@@ -110,7 +116,7 @@ const Section4 = () => {
                   <p className="bg-[#171717] w-fit px-3 py-1 rounded-md">
                     Product Design
                   </p>
-                </div>
+                </MotionSpan>
               </div>
 
               <div className="flex flex-3/6 relative justify-center items-center py-3">
@@ -123,7 +129,7 @@ const Section4 = () => {
               </div>
             </div>
             {/* three */}
-            <div className="flex pb-8 py-3">
+            <div className="flex flex-wrap gap-5 lg:flex-nowrap lg:gap-0 pb-8 py-3">
               <MotionSpan parentEl={parentEl} className="py-1">
                 <p>03</p>
               </MotionSpan>
@@ -141,7 +147,10 @@ const Section4 = () => {
                   Building digital products that combine design, technology, and
                   business strategy to deliver seamless user experiences.
                 </MotionSpan>
-                <div className="flex  flex-wrap gap-1 px-5 font-semibold">
+                <MotionSpan
+                  parentEl={parentEl}
+                  className="flex  flex-wrap gap-1 px-5 font-semibold"
+                >
                   <p className="bg-[#171717] w-fit px-3 py-1 rounded-md">
                     Frontend Development
                   </p>
@@ -161,7 +170,7 @@ const Section4 = () => {
                   <p className="bg-[#171717] w-fit px-3 py-1 rounded-md">
                     Databases
                   </p>
-                </div>
+                </MotionSpan>
               </div>
 
               <div className="flex flex-3/6 relative justify-center items-center py-3">

@@ -6,17 +6,17 @@ const HomeSectionTwo = () => {
   return (
     <>
       <div className="w-full h-fit min-h-fit">
-        <div className="flex w-full h-full justify-center items-center px-6">
-          <div className="w-[60%] text-[3.3rem] max-h-fit px-4 leading-tight font-bold">
+        <div className="flex flex-col lg:flex-row  w-full h-full justify-center items-center px-6">
+          <div className="w-full lg:w-[60%] text-[3.3rem] max-h-fit px-4 leading-tight font-bold">
             <p className="text-base uppercase font-semibold">Myself</p>
-            <ShakingText >
+            <ShakingText>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
               minus? Sint beatae ea laborum magnam eos temporibus amet eius
               rerum? Facere natus ut quas nobis, illum inventore tempora alias
               cum?
             </ShakingText>
           </div>
-          <div className="w-[40%] px-4">
+          <div className=" w-full aspect-video lg:aspect-auto lg:w-[40%] px-4">
             <div>
               <video
                 src="/video/new.mp4"
