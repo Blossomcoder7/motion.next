@@ -138,7 +138,7 @@ const Navbar = () => {
             <div className={`flex-1 ${open ? "hidden sm:block" : "block"}`}>
               <div className="h-full flex flex-col justify-center pl-3">
                 <p className="uppercase font-semibold text-lg md:text-xl hover:cursor-pointer select-none">
-                  Blossom Coder
+                  MOTION.NEXT
                 </p>
                 <p className="hidden sm:inline font-medium text-xs md:text-sm select-none ">
                   <AnimatedText speed={5000}>
